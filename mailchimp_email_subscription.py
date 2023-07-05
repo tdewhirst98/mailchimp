@@ -2,15 +2,16 @@ from mailchimp_marketing import Client
 import json
 import csv
 import os
-
 from dotenv import load_dotenv
+
+
 load_dotenv()
 
 api_key = os.environ.get("api_key")
 server = os.environ.get('server')
 list_id= os.environ.get('list_id')
 
-# THIS IS THE APPLICATION THAT WORKS
+
 mailchimp = Client()
 mailchimp.set_config({
   "api_key": api_key,
@@ -22,6 +23,7 @@ mailchimp.set_config({
 csvFilePath = '/Users/torindewhrst/Desktop/mailchimp/mailchimp_data_dump.csv'
 jsonFilePath = '/Users/torindewhrst/Desktop/mailchimp/mailchimp_email_subscription.json'
 
+# READING CSV FILE
 
 with open(csvFilePath, "r") as f:
     reader = csv.reader(f)
@@ -30,7 +32,7 @@ with open(csvFilePath, "r") as f:
     for row in reader:
         contacts["contacts"].append({"operation_id": row[0], "time_in": row[1], "time_out": row[2], "email": row[3], "pasword_hash": row[4], "status": row[5], "tags": row[6], })
         
-
+# CONVERTING TO JSON
 with open(jsonFilePath, 'w') as f:
  json.dump(contacts, f, indent=4)
 
@@ -68,7 +70,7 @@ for all_contacts in data['contacts'][0:99]:
    ]
 
 
-
+# POSTING TO MAILCHIMP
     operations = []
     for item in member_info:
         operation = {
