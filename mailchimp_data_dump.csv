@@ -1,0 +1,2 @@
+operation_id,time_in,time_out,email,password_hash,status,tags
+op_id,2022-01-01 00:00:00,2022-01-01 00:00:00,email@email,password,subscribed,tag3

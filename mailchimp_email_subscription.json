@@ -1,0 +1,13 @@
+{
+    "contacts": [
+        {
+            "operation_id": "op_id",
+            "time_in": "2022-01-01 00:00:00",
+            "time_out": "2022-01-01 00:00:00",
+            "email": "email@email",
+            "pasword_hash": "password",
+            "status": "subscribed",
+            "tags": "tag3"
+        }
+    ]
+}
