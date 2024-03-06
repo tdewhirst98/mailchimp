@@ -2,13 +2,13 @@
 
 ## Step 1: Install Packages
 
-``` bash
+```bash
 pip install mailchimp-marketing python-dotenv
 
 
 ## Step 2: Set up Enviroment Variables
 
-``` bash 
+```bash 
 API_KEY=your-mailchimp-api-key
 SERVER=your-mailchimp-server
 LIST_ID=your-mailchimp-list-id
@@ -18,7 +18,7 @@ LIST_ID=your-mailchimp-list-id
 # Step 3: nsure that your CSV file containing the data you want to import is located at the specified path.
 Run the Python script mailchimp_importer.py.
 
-``` bash 
+```bash 
 python mailchimp_importer.py
 
 
