@@ -6,7 +6,7 @@
 pip install mailchimp-marketing python-dotenv
 
 
-## Step 2: Set up Enviroment Variables
+# Step 2: Set up Enviroment Variables
 
 ``` bash 
 API_KEY=your-mailchimp-api-key
